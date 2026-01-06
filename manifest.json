@@ -1,0 +1,24 @@
+{
+  "name": "Site Blocker",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Blocks access to selected websites until a password is entered.\n\nIf you enter the password, the site will be unblocked until you close the tab.",
+  "permissions": ["storage", "tabs", "webRequest"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,194 @@
+body {
+    background-color: #000000; /* Black background for the popup */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 280px; /* Slightly increased width for better content fit */
+    padding: 30px; /* Increased padding */
+    text-align: center;
+    background-color: #1a1a1a; /* Dark gray for the central block */
+    border: 1px solid #666666; /* Gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin: 0 auto; /* Center the container */
+}
+
+h1 {
+    font-size: 20px; /* Slightly larger heading */
+    margin-bottom: 20px; /* More space below heading */
+    color: #f44336; /* Red color for the main heading */
+}
+
+h2 {
+    font-size: 18px; /* Slightly larger sub-heading */
+    margin: 25px 0 15px; /* Adjusted margins */
+    color: #cccccc;
+}
+
+input {
+    width: calc(100% - 20px); /* Adjust width for padding */
+    padding: 10px; /* Increased padding */
+    margin-bottom: 15px; /* More space below input */
+    box-sizing: border-box;
+    border: 1px solid #555555; /* Grayish border */
+    border-radius: 4px;
+    background-color: #333333; /* Darker background for input */
+    color: #ffffff; /* White text */
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #aaaaaa; /* Placeholder color */
+}
+
+button {
+    width: 100%;
+    padding: 10px 15px; /* Adjusted padding */
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; /* Bold text for buttons */
+    transition:
+        background-color 0.2s,
+        transform 0.1s; /* Added transform for subtle click effect */
+    font-size: 15px; /* Larger font size */
+}
+
+button:active {
+    transform: translateY(1px); /* Subtle press effect */
+}
+
+#setPassword {
+    background-color: #1565c0; /* Blue color */
+    color: white;
+}
+
+#setPassword:hover {
+    background-color: #0d47a1; /* Darker blue on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px; /* Increased margin */
+    padding: 10px; /* Increased padding */
+    background: #282828; /* Slightly lighter dark gray for list items */
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+li button {
+    width: auto;
+    padding: 6px 10px; /* Adjusted padding for remove button */
+    background-color: #f44336; /* Red color for remove button */
+    color: white;
+    margin: 0;
+    border-radius: 4px; /* Slightly more rounded */
+    font-size: 13px;
+    font-weight: normal; /* Normal weight for remove button text */
+}
+
+li button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    margin-bottom: 20px; /* More space below the switch */
+}
+
+/* Hide default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #555555; /* Darker gray for the slider track */
+    transition: 0.4s;
+    border-radius: 26px;
+}
+
+/* Circle */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Checked state */
+.switch input:checked + .slider {
+    background-color: #4caf50;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.checked {
+    background-color: #4caf50 !important;
+}
+
+.title-toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-evenly;
+}
+
+.title-toggle h2 {
+    margin: 0;
+}
+
+#toggleList {
+    width: auto;
+    color: #ffffff;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#iconList {
+    transition: transform 0.3s ease;
+}
+
+#iconList.rotated {
+    transform: rotate(180deg);
+}
+
+.hidden {
+    display: none;
+}
